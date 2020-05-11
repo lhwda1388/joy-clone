@@ -1,0 +1,136 @@
+@import './reset.css';
+@import './common.css';
+
+
+.wrap .container .main .top {
+  margin-bottom: 30px;
+}
+
+.wrap .container .main .top::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+/* 로그인 시작*/
+.wrap .container .main .top .login {
+  float: left;
+  width: 300px;
+  height: 358px;
+  background: #282828;
+  margin: 0 auto;
+  color: #a0a0a0;
+}
+
+.wrap .container .main .top .login .login-inner {
+  width: 240px;
+  margin: 25px auto;
+}
+
+.wrap .container .main .top .login .login-inner h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.wrap .container .main .top .login .login-inner div {
+  margin-bottom: 12px;
+}
+
+.wrap .container .main .top .login .login-inner .login-info p {
+  margin-bottom: 6px;
+}
+
+.wrap .container .main .top .login .login-inner .login-info p input {
+  width: 100%;
+  background: #101010;
+  border: 1px solid #303030;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 20px 5px 20px 15px;
+  color: #a0a0a0;
+  box-sizing: border-box;
+}
+
+.wrap .container .main .top .login .login-inner .login-check {
+  font-size: 11px;
+}
+
+.wrap .container .main .top .login .login-inner .login-check input[type='checkbox'] {
+  display: none;
+}
+
+.wrap .container .main .top .login .login-inner .login-check input[type='checkbox'] + label::before {
+  content: ' ';
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+  vertical-align: -6px;
+  background:url('../images/chk-box.jpg') no-repeat 0px 0px;
+  margin: 0 5px 0 0;
+}
+
+.wrap .container .main .top .login .login-inner .login-check input[type='checkbox']:checked + label::before {
+  background-position: 0 -20px;
+}
+
+.wrap .container .main .top .login .login-inner .login-etc ul::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.wrap .container .main .top .login .login-inner .login-etc ul li {
+  float: left;
+  font-size: 11px;
+  margin-right: 15px;
+  padding-right: 15px;
+  background-image: url('../images/stick.jpg');
+  background-repeat: no-repeat;
+  background-size: 1px;
+  background-position: right 2px;
+}
+
+.wrap .container .main .top .login .login-inner .login-etc ul li:last-child {
+  background-image: none;
+}
+
+/* 로그인 끝*/
+
+
+/* 슬라이드 시작*/
+.wrap .container .main .top div.slide {
+  float: right;
+  height: 358px;
+  width: 860px;
+}
+
+/* 슬라이드 끝*/
+
+/* 게임리스트 시작 */
+.wrap .container .main .game-list {
+  margin-bottom: 10px;
+}
+
+.wrap .container .main .game-list h3 {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.wrap .container .main .game-list ul::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.wrap .container .main .game-list ul li {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.wrap .container .main .game-list ul li:last-child, .wrap .container .main .game-list ul li:nth-child(6n) {
+  margin-right: 0;
+}
+/* 게임리스트 끝 */
+
+/* 아주잘했네 */

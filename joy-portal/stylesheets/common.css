@@ -1,0 +1,118 @@
+.wrap {
+  background: #eaeaea;
+}
+
+/* header 시작 */
+.wrap .header {
+  height: 54px;
+}
+
+.wrap .header .header-cont {
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.wrap .header .header-cont .nav {
+  position: absolute;
+  right: 0;
+  top: 19px;
+}
+
+.wrap .header .header-cont .nav li{
+  float: right;
+  margin-left: 40px;
+}
+
+.wrap .header .header-cont .nav li a{
+  font-weight: bold;
+  color: #3b3b3b;
+}
+/* header 끝 */
+
+/* 본문 시작 */
+.wrap .container {
+  width: 1180px;
+  margin: 0 auto;
+}
+/* 본문 끝 */
+
+/* footer 시작 */
+.wrap .footer {
+  background: #262626;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-top: 30px;
+}
+
+.wrap .footer .footer-cont {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.wrap .footer .footer-cont::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.wrap .footer .footer-cont div {
+  float: left;
+}
+.wrap .footer .footer-cont div:last-child {
+  float: right;
+}
+
+.wrap .footer .footer-cont .copyright {
+  padding-left: 15px;
+  color: #a0a0a0;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.wrap .footer .footer-cont .copyright ul {
+  margin-bottom: 10px;
+}
+
+.wrap .footer .footer-cont .copyright ul::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.wrap .footer .footer-cont .copyright ul li{
+  float: left;
+  margin-right: 15px;
+  padding-right: 15px;
+  background-image: url('../images/stick.jpg');
+  background-repeat: no-repeat;
+  background-size: 1px;
+  background-position: right 2px;
+}
+
+.wrap .footer .footer-cont .copyright ul li:last-child {
+  background-image: none;
+}
+
+.wrap .footer .footer-cont .copyright p {
+  margin-bottom: 10px;
+}
+
+.wrap .footer .footer-cont .lang .lang-select{
+  border: 1px solid #404040;
+  width: 100px;
+  display: inline-block;
+  color: #a0a0a0;
+  padding: 8px 0 8px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.wrap .footer .footer-cont .lang .lang-select{
+  background-image: url('../images/arrow-down.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 95% center;
+}
+
+/* footer 끝 */
