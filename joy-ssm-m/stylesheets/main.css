@@ -189,46 +189,42 @@
   padding: 20px 20px;
 }
 
-.wrap .content .sub-content .main .banner-box .noti-box .noti-list > li::after {
-  content: '';
-  clear: both;
-  display: block;
-}
-
 .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-tit {
-  float: left;
+  display: inline-block;
   text-align: left;
   width: 69%;
   max-width: 69%;
 }
 
 .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info {
-  float: right;
+  display: inline-block;
   text-align: right;
   min-width: 30%;
 }
 
-.wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-tit::after {
-  content: '';
-  clear: both;
-  display: block;
-}
-
 .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-tit .cate {
-  float: left;
+  display: inline-block;
   background-color: #202020;
   color: #eee;
-  padding: 5px 20px;
   box-sizing: border-box;
   font-size: 13px;
   margin-right: 5px;
+  vertical-align: middle;
+  width: 60px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
 }
 
 .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-tit .tit {
-  float: left;
+  display: inline-block;
   max-width: 700px;
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
   text-overflow: ellipsis;
-  word-wrap: nowrap;
+  vertical-align: middle;
+  line-height: 24px;
 }
 
 .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-tit .tit a{
@@ -236,35 +232,34 @@
   font-weight: bold;
 }
 
-.wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info .name {
-  float: left;
+  display: inline-block;
   font-weight: bold;
   text-align: left;
   width: 44%;
+  vertical-align: middle;
 }
 
 .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info .date {
   width: 30%;
-  float: left;
+  display: inline-block;
   text-align: center;
+  vertical-align: middle;
 }
 
 .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info .read-cnt {
   width: 15%;
-  float: right;
+  display: inline-block;
   text-align: right;
+  vertical-align: middle;
 }
 
 
 @media all and (max-width: 640px) {
-  .wrap .content .left-menu {
-    display: none;
+
+  .wrap .content .sub-content .main{
+    height: auto;
+    padding-bottom: 2rem;
   }
 
   .wrap .content .sub-content .main .top-img img {
@@ -329,18 +324,57 @@
     display: none;
   }
 
+  .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li {
+    padding: .5rem .5rem;
+  }
+
   .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-tit {
-    float: none;
-    width: 100%;
+    min-width: 100%;
   }
 
   .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-tit .tit {
-    max-width: 100%;
     text-overflow: '';
     word-break: break-all;
+    white-space: normal;
+    display: inline;
+  }
+
+  .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-tit .tit a {
+    font-size: .9em;
   }
   
   .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info {
-    float: none;
+    font-size: .7em;
+    padding: .5rem 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info > span:not(:last-child)::after {
+    content: '';
+    width: 1px;
+    height: .8em;
+    display: inline-block;
+    margin: 0 .5rem;
+    background-color: #C0C0C0;
+  }
+
+  .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info .name {
+    display: inline;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+  
+  .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info .date {
+    display: inline;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .wrap .content .sub-content .main .banner-box .noti-box .noti-list > li .noti-info .read-cnt {
+    display: inline;
+    text-align: right;
+    vertical-align: middle;
   }
 }
