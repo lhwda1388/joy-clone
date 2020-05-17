@@ -2,3 +2,4 @@
 # 아래 순서로 진행되었음.
 1. joy-portal
 2. joy-ssm
+3. joy-ssm-m
