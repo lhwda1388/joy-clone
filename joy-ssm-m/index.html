@@ -12,15 +12,103 @@
 <body>
   <div class="wrap">
     <!-- 헤더 시작 -->
-    <div class="header">
+    <div class="header" id="top">
       <div class="header-in">
-        <div class="menu-btn">a</div>
+        <div class="menu-box">
+          <a href="#" class="menu-btn" id="top-menu-btn">
+            <div class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </a>
+        </div>
         <h1 class="logo"><img src="./images/logo.png"></h1>
-        <a href="#" class="login-btn"><span>로그인</span></a>
+        <div class="login-box">
+          <a href="#" class="login-btn">로그인</a>
+        </div>
       </div>
-      <ul class="menu-list">
-
-      </ul>
+      <div class="menu-list-box">
+        <div class="search-box">
+          <input type="text" placeholder="통합검색" />
+          <a href="#" class="search-btn"><img src="images/ico_search2.png"></a>
+        </div>
+        <ul class="menu-list">
+          <li class="on">
+            <p class="menu-box">
+              <span class="menu-tit">전체글</span>
+              <span class="post-count">(3,903)</span>
+              <img src="./images/ico_new.gif" alt="new" />
+            </p>
+          </li>
+          <li class="on">
+            <p class="menu-box">
+              <span class="menu-tit">새로운소식</span>
+            </p>
+            <ul class="sub-menu-list">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">점검&패치노트</a></li>
+              <li><a href="#">GM매거진</a></li>
+              <li><a href="#">페이스북소식</a></li>
+            </ul>
+          </li>
+          <li class="on">
+            <p class="menu-box">
+              <span class="menu-tit">이벤트</span>
+              <ul class="sub-menu-list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">점검&패치노트</a></li>
+                <li><a href="#">GM매거진</a></li>
+                <li><a href="#">페이스북소식</a></li>
+              </ul>
+            </p>
+          </li>
+          <li class="on">
+            <p class="menu-box">
+              <span class="menu-tit">이벤트</span>
+              <ul class="sub-menu-list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">점검&패치노트</a></li>
+                <li><a href="#">GM매거진</a></li>
+                <li><a href="#">페이스북소식</a></li>
+              </ul>
+            </p>
+          </li>
+          <li class="on">
+            <p class="menu-box">
+              <span class="menu-tit">이벤트</span>
+              <ul class="sub-menu-list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">점검&패치노트</a></li>
+                <li><a href="#">GM매거진</a></li>
+                <li><a href="#">페이스북소식</a></li>
+              </ul>
+            </p>
+          </li>
+          <li class="on">
+            <p class="menu-box">
+              <span class="menu-tit">이벤트</span>
+              <ul class="sub-menu-list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">점검&패치노트</a></li>
+                <li><a href="#">GM매거진</a></li>
+                <li><a href="#">페이스북소식</a></li>
+              </ul>
+            </p>
+          </li>
+          <li class="on">
+            <p class="menu-box">
+              <span class="menu-tit">이벤트</span>
+              <ul class="sub-menu-list">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">점검&패치노트</a></li>
+                <li><a href="#">GM매거진</a></li>
+                <li><a href="#">페이스북소식</a></li>
+              </ul>
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
     <!-- 헤더 끝 -->
     <div class="content">
@@ -274,7 +362,16 @@
         <p>Copyright ⓒ JOYCITY Corporation. <br> All rights reserved.</p>
       </div>
     </div>
+    <div class="quick">
+      <div>
+        <a href="#top"><img src="./images/btn_top.png" alt="top"/></a>
+      </div>
+      <div>
+      <a href="#"><img src="./images/btn_write.png" alt="wirte"/></a>
+      </div>
+    </div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script>
     window.onload = function () {
@@ -307,6 +404,28 @@
           slideChangeTransitionEnd: function () {
             document.getElementsByClassName('curr-page')[0].innerHTML = this.activeIndex + 1
           }
+        }
+      });
+
+      $('#top-menu-btn').on('click', function () {
+        if (!$('.menu-list-box').hasClass('on')) {
+          $('.menu-list-box').addClass('on')
+          $(this).find('.icon').addClass('active')
+        } else {
+          $('.menu-list-box').removeClass('on')
+          $(this).find('.icon').removeClass('active')
+        }
+      });
+     
+      $('a').on('click', function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            window.location.hash = hash;
+          })
         }
       });
     }
