@@ -1,9 +1,17 @@
 @font-face {
   font-family: 'NanumGothic';
   font-style: normal;
-  src: url('/fonts/NanumGothic.eot');
-  src: url('/fonts/NanumGothic.eot?#iefix') format(‘embedded-opentype’),
-    url('/fonts/NanumGothic.woff') format(‘woff’);
+  src: url('/fonts/Nanum-web-font/NanumGothic.eot');
+  src: url('/fonts/Nanum-web-font/NanumGothic.eot?#iefix')
+      format(‘embedded-opentype’),
+    url('/fonts/Nanum-web-font/NanumGothic.woff') format(‘woff’);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  src: url('/fonts/Roboto/Roboto-Regular.ttf');
+  src: url('/fonts/Roboto/NanumGothic.ttf') format(ttf);
 }
 
 html,
