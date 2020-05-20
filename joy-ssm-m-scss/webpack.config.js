@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -14,13 +15,16 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       minify: {
-        collapseWhitespace: true,
+        // collapseWhitespace: true,
       },
       hash: true,
       template: './index.html',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: './src/images', to: './src/images' }],
+    }),
   ],
   module: {
     rules: [
