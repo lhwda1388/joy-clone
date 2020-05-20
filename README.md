@@ -3,3 +3,4 @@
 1. joy-portal
 2. joy-ssm
 3. joy-ssm-m
+4. joy-wasm
