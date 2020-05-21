@@ -4,18 +4,18 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 
-console.log(path.join(__dirname, 'src/fonts'))
+console.log(path.resolve(__dirname, 'src/fonts'))
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'index.bundle.js',
     publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', 'css', 'scss', 'sass'],
     alias: {
-      fonts: path.join(__dirname, 'src/fonts'),
+      fonts: path.resolve(__dirname, 'src/fonts'),
     },
   },
   plugins: [
@@ -43,33 +43,25 @@ module.exports = {
     rules: [
       {
         test: /\.(css|scss|sass)$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        loader: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(css|scss|sass)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        loader: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              filename: 'img/[name].[ext]',
-            },
-          },
-        ],
+        test: /\.(png|jpg|gif)(\?.*)?$/i,
+        loader: 'url-loader',
+        options: {
+          name: 'img/[name].[ext]',
+        },
       },
       {
-        test: /\.(ttf|eot|svg|gif|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              filename: 'fonts/[name].[ext]',
-            },
-          },
-        ],
+        test: /\.(ttf|eot|svg|woff|woff2)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          name: 'fonts/[name].[ext]',
+        },
       },
     ],
   },

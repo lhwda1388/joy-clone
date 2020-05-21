@@ -1,7 +1,4 @@
-@import './common/variable.scss';
-@import './common/reset.scss';
-@import './common/common.scss';
-@import './common/mixin.scss';
+@import './common//import.scss';
 
 .wrap .content .sub-content .main {
   width: 100%;
@@ -22,9 +19,7 @@
         .swiper-wrapper {
           .swiper-slide {
             &::after {
-              content: '';
-              clear: both;
-              display: block;
+              @include clearBoth();
             }
             .txt-img {
               float: left;
@@ -111,9 +106,7 @@
     .banner02 {
       margin-bottom: 25px;
       &::after {
-        content: '';
-        clear: both;
-        display: block;
+        @include clearBoth();
       }
       > div {
         float: left;
@@ -141,9 +134,7 @@
     .noti-box {
       .noti-top {
         &::after {
-          content: '';
-          clear: both;
-          display: block;
+          @include clearBoth();
         }
         h3 {
           float: left;

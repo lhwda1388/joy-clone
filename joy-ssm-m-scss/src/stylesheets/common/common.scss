@@ -1,13 +1,68 @@
 @import './mixin.scss';
+@import './variable.scss';
+
 /*
 html {
   scroll-behavior:smooth
 }
 */
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  color: red;
+  src: url('~fonts/Nanum_Gothic/NanumGothic-Regular.eot');
+  src: url('~fonts/Nanum_Gothic/NanumGothic-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('~fonts/Nanum_Gothic/NanumGothic-Regular.woff2') format('woff2'),
+    url('~fonts/Nanum_Gothic/NanumGothic-Regular.woff') format('woff'),
+    url('~fonts/Nanum_Gothic/NanumGothic-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('~fonts/Nanum_Gothic/NanumGothic-Bold.eot');
+  src: url('~fonts/Nanum_Gothic/NanumGothic-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('~fonts/Nanum_Gothic/NanumGothic-Bold.woff2') format('woff2'),
+    url('~fonts/Nanum_Gothic/NanumGothic-Bold.woff') format('woff'),
+    url('~fonts/Nanum_Gothic/NanumGothic-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~fonts/Noto_Sans_KR/NotoSansKR-Regular.eot');
+  src: url('~fonts/Noto_Sans_KR/NotoSansKR-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('~fonts/Noto_Sans_KR/NotoSansKR-Regular.woff2') format('woff2'),
+    url('~fonts/Noto_Sans_KR/NotoSansKR-Regular.woff') format('woff'),
+    url('~fonts/Noto_Sans_KR/NotoSansKR-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url('~fonts/Noto_Sans_KR/NotoSansKR-Bold.eot');
+  src: url('~fonts/Noto_Sans_KR/NotoSansKR-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    url('~fonts/Noto_Sans_KR/NotoSansKR-Bold.woff2') format('woff2'),
+    url('~fonts/Noto_Sans_KR/NotoSansKR-Bold.woff') format('woff'),
+    url('~fonts/Noto_Sans_KR/NotoSansKR-Bold.ttf') format('truetype');
+}
+// @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
 body {
   background-image: url('../images/bg_main.jpg');
   width: 100%;
   height: 100%;
+  font-family: 'Nanum Gothic';
+  font-size: $font-size-base;
 }
 .wrap {
   width: 1540px;
@@ -21,9 +76,7 @@ body {
   .content {
     width: 100%;
     &::after {
-      content: '';
-      clear: both;
-      display: block;
+      @include clearBoth();
     }
     .left-menu {
       float: left;
@@ -184,9 +237,7 @@ body {
         margin-bottom: 15px;
       }
       .term::after {
-        content: '';
-        clear: both;
-        display: block;
+        @include clearBoth();
       }
       li {
         float: left;
@@ -482,9 +533,7 @@ body {
       }
       .term {
         &::after {
-          content: '';
-          clear: both;
-          display: block;
+          @include clearBoth();
         }
       }
       li {

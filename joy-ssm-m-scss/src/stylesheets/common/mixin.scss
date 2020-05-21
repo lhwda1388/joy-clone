@@ -23,3 +23,9 @@
     @content;
   }
 }
+
+@mixin clearBoth() {
+  content: '';
+  clear: both;
+  display: block;
+}
