@@ -98,7 +98,7 @@
           .swiper-pagination-bullet.swiper-pagination-bullet-active {
             width: 13px;
             height: 13px;
-            background-color: #c10909;
+            background-color: $color-red;
           }
         }
       }
@@ -142,15 +142,15 @@
         }
         .more {
           float: right;
-          border: solid 1px #c10909;
-          color: #c10909;
+          border: solid 1px $color-red;
+          color: $color-red;
           font-weight: bold;
           padding: 16px 60px;
         }
       }
       .noti-list {
         margin-top: 15px;
-        border-top: solid 2px #c10909;
+        border-top: solid 2px $color-red;
         > li {
           .noti-tit {
             display: inline-block;
@@ -221,7 +221,7 @@
 @media all and (max-width: 640px) {
   .wrap .content .sub-content .main {
     height: auto;
-    padding-bottom: 2rem;
+    padding-bottom: 24px;
     .top-img {
       img {
         display: none;
@@ -267,7 +267,7 @@
         .noti-top {
           h3 {
             float: none;
-            font-size: 1em;
+            font-size: 3vw;
           }
           .more {
             display: none;
@@ -275,7 +275,7 @@
         }
         .noti-list {
           > li {
-            padding: 0.5rem 0.5rem;
+            padding: 8px 8px;
             .noti-tit {
               min-width: 100%;
               .tit {
@@ -284,13 +284,13 @@
                 white-space: normal;
                 display: inline;
                 a {
-                  font-size: 0.9em;
+                  font-size: $font-size-base * 0.9;
                 }
               }
             }
             .noti-info {
-              font-size: 0.7em;
-              padding: 0.5rem 0;
+              font-size: $font-size-base * 0.7;
+              padding: 3px 0;
               width: 100%;
               text-align: left;
               > span {
@@ -298,9 +298,9 @@
                   &::after {
                     content: '';
                     width: 1px;
-                    height: 0.8em;
+                    height: 8px;
                     display: inline-block;
-                    margin: 0 0.5rem;
+                    margin: 0 6px;
                     background-color: #c0c0c0;
                   }
                 }

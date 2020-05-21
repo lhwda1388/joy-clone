@@ -29,3 +29,31 @@
   clear: both;
   display: block;
 }
+
+@mixin menuArrow($isUp: true) {
+  @if $isUp {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: solid 1px #ffae14;
+    display: inline-block;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    right: 20px;
+    bottom: 24px;
+  } @else {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: solid 1px #ffae14;
+    display: inline-block;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(-45deg);
+    right: 20px;
+    top: 24px;
+  }
+}
