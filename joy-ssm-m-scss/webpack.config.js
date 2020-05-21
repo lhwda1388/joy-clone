@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.bundle.js',
-    publicPath: '/',
+    publicPath: process.env.NODE_ENV === 'production' ? '/joy-clone/' : '/',
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', 'css', 'scss', 'sass'],
@@ -25,6 +25,7 @@ module.exports = {
       },
       hash: true,
       template: './index.html',
+      publicPath: process.env.NODE_ENV === 'production' ? '/joy-clone/' : '/',
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
